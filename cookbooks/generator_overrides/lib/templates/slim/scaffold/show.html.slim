@@ -1,0 +1,5 @@
+<% attributes.reject(&:password_digest?).each do |attribute| -%>
+p
+  strong <%= attribute.human_name %>:
+  = @<%= singular_table_name %>.<%= attribute.name %>
+<% end -%>

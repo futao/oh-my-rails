@@ -80,6 +80,7 @@ after_bundle do
     misc
     bower_rails  kaminari guard rspec friendly_id
     i18n_task sidekiq capistrano devise foreman
+    generator_overrides shared_partials
   }.each do |recipe|
     current_recipe_path = File.join(cookbooks_path, recipe , 'install.rb')
     rake "rails:template LOCATION=#{current_recipe_path}"

@@ -1,0 +1,21 @@
+.row
+  .col-xs-12
+    = link_to 'New <%= singular_table_name %>', new_<%= singular_table_name %>_path
+
+.row
+  .col-xs-12
+    .box
+      .box-header
+        h3.box-title <%= plural_table_name %>
+        .box-tools
+
+      .box-body.table-responsive.no-padding
+        table.table.table-hover
+          tbody
+            tr
+<% attributes.reject(&:password_digest?).each do |attribute| -%>
+              th <%= attribute.human_name %>
+<% end -%>
+              th options
+
+            = render @<%= plural_table_name %>
