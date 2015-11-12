@@ -1,3 +1,4 @@
+run "cap install"
 uncomment_lines 'Capfile', /require.*rbenv/
 uncomment_lines 'Capfile', /require.*bundle/
 uncomment_lines 'Capfile', /require.*rails/
