@@ -1,3 +1,6 @@
+app_name = ARGV[1].to_s
+app_name_env = app_name.upcase
+
 application "config.generators.assets = false"
 application "config.generators.helper = false"
 application "config.i18n.default_locale = 'zh-CN'"

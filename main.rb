@@ -1,9 +1,6 @@
 require 'active_support/core_ext/string/indent.rb'
 require 'active_support/core_ext/string/strip.rb'
 
-app_name = ARGV[1].to_s
-app_name_env = app_name.upcase
-
 cookbooks_path = File.expand_path('../cookbooks',__FILE__)
 
 gem 'devise'
