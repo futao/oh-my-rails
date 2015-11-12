@@ -38,15 +38,22 @@ gem_group :development do
   gem 'capistrano3-puma'
   gem 'capistrano-sidekiq'
 
-  # Other
+  # Rspec
+  gem 'spring-commands-rspec'
+
+  # Debug
   gem 'pry-rails'
   gem 'meta_request'
   gem 'quiet_assets'
   gem 'rails-erd'
-  gem 'letter_opener'
+
+
+  # Code Analytics
   gem 'brakeman'
   gem 'rails_best_practices'
-  gem 'spring-commands-rspec'
+
+  # Mail
+  gem 'letter_opener'
 end
 
 gem_group :test do
