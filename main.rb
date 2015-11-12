@@ -73,7 +73,7 @@ after_bundle do
   rake 'db:migrate'
   git :init
   git add: '.'
-  git commit: %q{ -m 'Initial commit'}
+  git commit: %q{ -m 'oh-my-rails: initial commit'}
 
   %w{
     misc
@@ -83,15 +83,15 @@ after_bundle do
     current_recipe_path = File.join(cookbooks_path, recipe , 'install.rb')
     rake "rails:template LOCATION=#{current_recipe_path}"
     git add: '.'
-    git commit: %Q< -m 'Add #{recipe.upcase}' >
+    git commit: %Q< -m 'oh-my-rails: add #{recipe.downcase}' >
   end
 
   run "bundle exec spring binstub  --all"
   git :init
   git add: '.'
-  git commit: %q{ -m 'Setup Spring'}
+  git commit: %q{ -m 'oh-my-rails: setup spring'}
 
   rake 'tmp:create'
-  run "bundle exec launchy http://127.0.0.1:3000/welcome/index"
+  run "bundle exec launchy http://127.0.0.1:3000"
   run "bundle exec foreman start"
 end
