@@ -1,8 +1,1 @@
-if yes?("是否创建--robots.txt文件？--")
-  create_file 'robots.txt' do
-    <<-EOS.strip_heredoc
-  	  User-agent: *
-  	  Disallow: /
-    EOS
-  end
-end
+uncomment_lines 'public/robots.txt', /User-agent|Disallow/i if yes?("是否屏蔽搜索引擎？(y/n)")
