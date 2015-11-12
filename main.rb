@@ -11,6 +11,7 @@ gem 'bower-rails'
 gem 'sidekiq'
 gem 'sinatra', :require => nil
 gem 'puma'
+gem 'friendly_id'
 
 gem 'kaminari'
 gem 'slim-rails'
@@ -77,7 +78,7 @@ after_bundle do
 
   %w{
     misc
-    bower_rails  kaminari guard rspec
+    bower_rails  kaminari guard rspec friendly_id
     i18n_task sidekiq capistrano devise foreman
   }.each do |recipe|
     current_recipe_path = File.join(cookbooks_path, recipe , 'install.rb')
