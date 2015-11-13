@@ -12,9 +12,10 @@
     = f.password_field :password_confirmation, class: 'form-control'
 <% else -%>
     = f.label :<%= attribute.column_name %>
-    = f.<%= attribute.field_type %> :<%= attribute.column_name %>
+    = f.<%= attribute.field_type %> :<%= attribute.column_name %>, class: 'form-control'
 <% end -%>
 <% end -%>
-  .form_group
+
+  .form-group
     = f.submit class: "btn btn-primary"
     = link_to t("common.back"), <%= index_helper %>_path, class: "btn btn-danger"
