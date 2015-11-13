@@ -4,6 +4,9 @@ require 'active_support/core_ext/string/strip.rb'
 cookbooks_path = File.expand_path('../cookbooks',__FILE__)
 
 gem 'devise'
+gem 'devise-i18n'
+gem 'devise_invitable'
+
 gem 'rails-i18n'
 gem 'i18n-tasks', '0.8.7'
 gem 'seedbank'
