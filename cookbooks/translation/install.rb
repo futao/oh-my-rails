@@ -8,6 +8,21 @@ create_file "config/locales/active_record.yml" do
         attributes:
   EOS
 end
+
+# common translation
+create_file 'config/locales/view.yml' do
+  <<-EOS.strip_heredoc
+    zh-CN:
+      common: &common
+        actions: 操作
+        show: 详情
+        edit: 编辑
+        destroy: 删除
+        back: 返回
+        submit: 提交
+  EOS
+end
+
 # kaminari
 create_file 'config/locales/kaminari.yml' do
   <<-EOS.strip_heredoc
