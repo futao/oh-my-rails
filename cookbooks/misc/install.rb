@@ -8,7 +8,7 @@ generate "annotate:install"
 create_file 'db/seeds/development/.keep'
 
 insert_into_file 'config/database.yml', :after=>"adapter: postgresql\n" do
-  %Q{host: <%= ENV['#{app_path.basename.to_s.upcase}DATABASE_HOST'] %>}.indent(2)
+  %Q{host: <%= ENV['#{app_path.basename.to_s.upcase}_DATABASE_HOST'] %>\n}.indent(2)
 end
 
 create_file '.env' do
