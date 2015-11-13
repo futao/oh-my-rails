@@ -1,4 +1,4 @@
-if yes?("覆盖生成器scaffold?")
-  directory File.join(File.dirname(__FILE__), 'lib/generators/slim/scaffold'), 'lib/generators/slim/scaffold'
-  directory File.join(File.dirname(__FILE__), 'lib/templates/slim/scaffold'), 'lib/templates/slim/scaffold'
+if yes?("覆盖生成器mailer && scaffold?")
+  directory File.join(File.dirname(__FILE__), 'lib/generators/slim'), 'lib/generators/slim'
+  directory File.join(File.dirname(__FILE__), 'lib/templates/slim'), 'lib/templates/slim'
 end
