@@ -7,9 +7,14 @@ generate "annotate:install"
 
 create_file 'db/seeds/development/.keep'
 
+insert_into_file 'config/database.yml', :after=>"adapter: postgresql\n" do
+  %Q{host: <%= ENV['#{app_path.basename.to_s.upcase}DATABASE_HOST'] %>}.indent(2)
+end
+
 create_file '.env' do
   <<-EOS.strip_heredoc
     export SECRET_KEY_BASE=example
+    export #{app_path.basename.to_s.upcase}_DATABASE_HOST=localhost
     export #{app_path.basename.to_s.upcase}_DATABASE_PASSWORD=example
   EOS
 end
