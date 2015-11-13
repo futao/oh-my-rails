@@ -18,7 +18,5 @@ append_to_file 'config/secrets.yml' do
   EOS
 end
 
-
-# @TODO problem?
-copy_file 'config/environments/production.rb',
+copy_file File.expand_path('config/environments/production.rb', app_path),
           'config/environments/staging.rb'
