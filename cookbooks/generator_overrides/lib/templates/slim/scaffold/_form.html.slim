@@ -16,5 +16,5 @@
 <% end -%>
 <% end -%>
   .form_group
-    = f.submit "确定", class: "btn btn-primary"
-    = link_to "返回", <%= index_helper %>_path, class: "btn btn-danger"
+    = f.submit class: "btn btn-primary"
+    = link_to t("common.back"), <%= index_helper %>_path, class: "btn btn-danger"
