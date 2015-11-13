@@ -77,7 +77,7 @@ after_bundle do
   git commit: %q{ -m 'oh-my-rails: initial commit'}
 
   %w{
-    misc
+    misc staging
     bower_rails  kaminari guard rspec friendly_id
     i18n_task sidekiq capistrano devise foreman
   }.each do |recipe|
