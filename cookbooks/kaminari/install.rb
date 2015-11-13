@@ -1,2 +1,2 @@
 generate "kaminari:config"
-generate "kaminari:views bootstrap3 -e slim"
+directory File.expand_path('../bootstrap3', __FILE__), 'app/views/kaminari'
