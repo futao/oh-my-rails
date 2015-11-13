@@ -61,9 +61,9 @@ append_to_file 'config/database.yml' do
 
     staging:
       <<: *default
-      database: #{app_name}_staging
-      username: #{app_name}
-      password: <%= ENV['FENG_HRS_01_DATABASE_PASSWORD'] %>
+      database: #{app_path.basename}_staging
+      username: #{app_path.basename}
+      password: <%= ENV['#{app_path.basename}_DATABASE_PASSWORD'] %>
   EOS
 end
 
