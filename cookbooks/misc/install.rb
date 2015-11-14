@@ -26,3 +26,5 @@ append_to_file '.gitignore' do
     rails_best_practices_output.html
   EOS
 end
+
+create_file 'Procfile', 'web: bundle exec rails s puma -b 0.0.0.0'

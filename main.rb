@@ -86,7 +86,6 @@ after_bundle do
     bower_rails  kaminari guard  friendly_id
     sidekiq  devise adminlte
     generator_overrides shared_partials
-    foreman
   }.each do |recipe|
     if yes? "install #{recipe}? [Y/n]"
       current_recipe_path = File.join(cookbooks_path, recipe , 'install.rb')
