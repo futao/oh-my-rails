@@ -82,9 +82,9 @@ after_bundle do
   cookbooks_path = File.expand_path('../cookbooks',__FILE__)
 
   %w{
-    misc  rspec i18n
+    misc  rspec i18n capistrano
     bower_rails  kaminari guard  friendly_id
-    sidekiq capistrano devise adminlte
+    sidekiq  devise adminlte
     generator_overrides shared_partials
     foreman
   }.each do |recipe|
