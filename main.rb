@@ -1,7 +1,7 @@
 require 'active_support/core_ext/string/indent.rb'
 require 'active_support/core_ext/string/strip.rb'
 
-cookbooks_path = File.expand_path('../cookbooks',__FILE__)
+
 
 gem 'devise'
 gem 'devise-i18n'
@@ -79,6 +79,8 @@ after_bundle do
   git add: '.'
   git commit: %q{ -m 'oh-my-rails: initial commit'}
 
+  cookbooks_path = File.expand_path('../cookbooks',__FILE__)
+
   %w{
     misc staging translation
     bower_rails  kaminari guard rspec friendly_id
@@ -86,10 +88,12 @@ after_bundle do
     generator_overrides shared_partials
     foreman
   }.each do |recipe|
-    current_recipe_path = File.join(cookbooks_path, recipe , 'install.rb')
-    rake "rails:template LOCATION=#{current_recipe_path}"
-    git add: '.'
-    git commit: %Q< -m 'oh-my-rails: add #{recipe.downcase}' >
+    if yes? "install #{recipe}? [Y/n]"
+      current_recipe_path = File.join(cookbooks_path, recipe , 'install.rb')
+      rake "rails:template LOCATION=#{current_recipe_path}"
+      git add: '.'
+      git commit: %Q< -m 'oh-my-rails: add #{recipe.downcase}' >
+    end
   end
 
   run "bundle exec spring binstub  --all"
