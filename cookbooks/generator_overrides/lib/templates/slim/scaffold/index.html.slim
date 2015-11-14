@@ -1,6 +1,6 @@
 .row
   .col-xs-12
-    = link_to 'New <%= singular_table_name %>', new_<%= singular_table_name %>_path
+    = link_to t("common.new")+"<%= class_name %>", new_<%= singular_table_name %>_path, class: "btn btn-primary"
 
 .row
   .col-xs-12
