@@ -1,0 +1,8 @@
+zh-CN:
+  common: &common
+    actions: 操作
+    show: 详情
+    edit: 编辑
+    destroy: 删除
+    back: 返回
+    submit: 提交
