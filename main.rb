@@ -40,7 +40,7 @@ gem_group :development do
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano3-puma'
-  gem 'capistrano-sidekiq'
+  gem 'capistrano-sidekiq',  '0.5.3'
 
   # Rspec
   gem 'spring-commands-rspec'
@@ -85,7 +85,7 @@ after_bundle do
     misc  rspec i18n capistrano
     bower_rails  kaminari guard  friendly_id
     sidekiq  devise adminlte
-    generator_overrides shared_partials
+    generator_overrides shared_partials github
   }.each do |recipe|
     
       current_recipe_path = File.join(cookbooks_path, recipe , 'install.rb')
