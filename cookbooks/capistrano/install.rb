@@ -13,6 +13,8 @@ insert_into_file 'Capfile', :after => "# require 'capistrano/passenger'\n" do
   EOD
 end
 
+
+gsub_file 'config/deploy.rb', "'my_app_name'", "'#{app_path.basename}'"
 uncomment_lines 'config/deploy.rb', /ask\s:branch/
 uncomment_lines 'config/deploy.rb', /set\s:linked_dirs/
 insert_into_file 'config/deploy.rb',
