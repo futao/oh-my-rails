@@ -87,12 +87,12 @@ after_bundle do
     sidekiq  devise adminlte
     generator_overrides shared_partials
   }.each do |recipe|
-    if yes? "install #{recipe}? [Y/n]"
+    
       current_recipe_path = File.join(cookbooks_path, recipe , 'install.rb')
       rake "rails:template LOCATION=#{current_recipe_path}"
       git add: '.'
       git commit: %Q< -m 'oh-my-rails: add #{recipe.downcase}' >
-    end
+    
   end
 
   run "bundle exec spring binstub  --all"
