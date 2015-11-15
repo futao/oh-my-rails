@@ -1,0 +1,65 @@
+<header>
+  <nav id="top-nav" class="navbar navbar-static-top navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <p>
+          欢迎致电：<span class="call-us">400－123－1111</span>
+        </p>
+      </div>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <%= link_to '招聘方', '#' %>
+        </li>
+        <li>
+          <%= link_to '经纪人', '#' %>
+        </li>
+        <li><a href="javascript:;">  <%= image_tag 'home-top-phone.png' %>手机端</a></li>
+        <li><a href="/">帮助中心</a></li>
+      </ul>
+    </div>
+  </nav>
+  <nav class="navbar navbar-default site-head">
+    <div class="container">
+      <div class="navbar-header">
+        <a href="/"><%= image_tag "logo.jpg" %></a>
+      </div>
+      <ul class="nav navbar-nav nav-left">
+        <li class="active"><a href="/">首页</a></li>
+        <li class="category-menu">
+          <input type="checkbox" id="c-menu"></input>
+          <a href="javascript:;">
+            <label for="c-menu">所有职位</label>
+          </a>
+        </li>
+        <li>
+          <%= link_to '我要招聘', '#' %>
+        </li>
+        <li>
+          <%= link_to '我要送人', '#' %>
+        </li>
+        <li><a href="/">关于我们</a></li>
+        <li><a href="/">联系我们</a></li>
+      </ul>
+      <ul class="nav user-bar navbar-nav navbar-right">
+        <li>
+          <%= link_to '登录', '#' %>
+        </li>
+        <li>
+          <%= link_to '注册', '#' %>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="nav-search hidden-xs">
+          <form class="navbar-form form-search" action="/search" method="GET">
+            <div class="form-group">
+              <input type="checkbox" id="toggle-search"></input>
+              <input class="form-control search-input" autofocus=true name="q" type="text" value="" placeholder="搜索本站内容">
+              <label for="toggle-search" class="fa btn-search fa-search"></label>
+            </div>
+          </form>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>

@@ -1,7 +1,7 @@
 append_to_file 'Bowerfile' do
   <<-EOS.strip_heredoc
 
-  asset "admin-lte"
+    asset "admin-lte"
   EOS
 end
 rake 'bower:install'

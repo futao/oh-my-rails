@@ -1,0 +1,248 @@
+a {
+  color: #37b97d;
+  text-decoration: none;
+}
+.hot-job-list {
+  border-top: 1px solid #eee;
+  margin-bottom:100px;
+  .job-panels {
+    width: 1140px;
+    margin: 0 auto;
+    .job-panel {
+      color: #FAFAFA;
+      float: left;
+      margin-right: 11px;
+      width:24%;
+      background: #f5f5f5;
+      border: none;
+      .salary {
+        color: #fd962a;
+      }
+      color:  #AAAAAA;
+      .requirements {
+        margin-top: 8px;
+        margin-bottom: 8px;
+      }
+      .location {
+        margin-top: 25px;
+      }
+      .ghost-label {
+        margin-top: 10px;
+        margin-right: 6px;
+        background: #fff;
+        border: 1px solid #2c94e0;
+        color: #2c94e0;
+        padding: 2px;
+      }
+    }
+  }
+
+  .index-job-header {
+    text-align: center;
+    padding: 15px 0;
+    ul {
+      width: 320px;
+      margin: 0 auto;
+      text-align:left;
+      li {
+        list-style: none;
+        margin-left: 20px;
+        float: left;
+        a,a:hover {
+          padding-bottom: 5px;
+          color: #333;
+          text-decoration: none;
+        }
+      }
+      li.active {
+        a {
+          border-bottom: 3px solid #f49828;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+
+.news-feed {
+
+  .panel {
+    box-shadow: none;
+    height:300px;
+    margin-bottom:80px;
+    .num {
+      color: #fdaf00;
+      margin-left:30px;
+    }
+    .panel-heading {
+      background-color: #fff;
+    }
+    .panel-body {
+      height: 275px;
+      overflow: hidden;
+      .row {
+        border-bottom: 1px dotted #eee;
+        padding: 8px;
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+      .daily-stats{
+        ul{
+          list-style-type:none;
+          li{
+            padding-bottom:10px;
+          }
+        }
+      }
+      p{
+        margin-bottom: 20px;
+        color:#9B9B9B;
+        span{
+          margin-right:8px;
+        }
+        .pub-time{
+          color:#fdaf00;
+        }
+        .pub-gong{
+          color:#609BFB;
+        }
+      }
+    }
+
+  }
+}
+
+.infomation {
+  li {
+    list-style: none;
+  }
+
+  .left-info {
+    ul {
+      padding-left: 5px;
+    }
+    .info-links {
+      border-bottom: 1px solid #ccc;
+      li:first-child {
+        margin-left: 0;
+      }
+      li {
+        float: left;
+        margin-left: 10px;
+        a {
+          color: #aaa;
+          line-height: 39px;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: none;
+            color: #E8B753;
+          }
+        }
+      }
+    }
+  }
+
+  .right-info {
+    line-height: 39px;
+    a {
+      color: #aaa;
+    }
+    .feeds-list {
+      margin-top: 12px;
+      color: #9b9b9b;
+      p {
+        margin-bottom: 2px;
+      }
+    }
+  }
+
+  .news-list {
+    li {
+      margin-top: 25px;
+      margin-bottom: 25px;
+    }
+    img {
+      height: 128px;
+    }
+    .new-content {
+      height: 128px;
+      text-overflow: ellipsis;
+      background: #FBFBFB;
+      word-wrap: normal;
+      color: #9b9b9b;
+      a {
+        color: #fbaa40;
+      }
+    }
+  }
+}
+
+.recommend-company {
+  background-image: image-url('bg-1.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding-bottom: 15px;
+  text-align: center;
+
+  .recommend-companies-header {
+    text-align: center;
+    padding-bottom: 32px;
+  }
+  .company-card-item {
+    padding: 8px;
+    text-align: center;
+    background: #fff;
+    transition: all .3s ease;
+
+    a {
+      color: #37b97d;
+      text-decoration: none;
+      background-color: transparent;
+    }
+    .company-avatar {
+      width: 190px;
+      height: 120px;
+    }
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1),0 6px 6px rgba(0,0,0,0.2);
+    }
+  }
+}
+.update-label {
+  margin: 30px 0;
+  font-size: 20px;
+  padding: 10px 25px;
+  line-height: 20px;
+  border: 1px solid black;
+}
+.unicorn-companies {
+  text-align: center;
+  margin-bottom:80px;
+  p {
+    color: #E8B753;
+  }
+  img {
+    margin-bottom: 10px;
+  }
+  .what-we-do {
+    padding: 40px 0;
+    background: #ffaf00;
+    span {
+      font-size: 20px;
+      color: #333;
+    }
+    .join-us {
+      background: #393939;
+      padding: 5px 25px;
+      color: #fff;
+      font-size: 15px;
+      margin-left: 20px;
+      border: none;
+      border-radius: 3px;
+    }
+  }
+}

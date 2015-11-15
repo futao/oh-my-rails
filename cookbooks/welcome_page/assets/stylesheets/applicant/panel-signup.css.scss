@@ -1,0 +1,45 @@
+.panel-signup {
+  border-radius: 2px;
+  width: 350px;
+  .nav-tabs {
+    padding: 0;
+    li {
+      background: #9a9a9a;
+      border-bottom: 1px transparent;
+      a {
+        margin: 0;
+        padding: 10px 0;
+        font-size: 25px;
+        line-height: 25px;
+      }
+    }
+    .active {
+      border-bottom: 1px solid #f7f7f7;
+    }
+    li.active {
+      a {
+        color: #ffaf00;
+      }
+    }
+  }
+
+  .panel-body {
+    .field {
+      margin-bottom: 12px;
+      a {
+        color: #FCA12F;
+      }
+    }
+    
+    .btn-signup {
+      color: #fff;
+      font-size: 17px;
+      line-height: 17px;
+      background-color: #FFA900;
+    }
+    .links {
+      margin-top: 12px;
+      text-align: center;
+    }
+  }
+}
