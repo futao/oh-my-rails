@@ -1,11 +1,11 @@
 <% attributes.reject(&:password_digest?).each do |attribute| -%>
 .row
-  .col-md-2 <%= attribute.human_name %>:
+  .col-md-2 = <%= class_name %>.human_attribute_name('<%= attribute.name %>')
   .col-md-10
-    =@<%= singular_table_name %>.<%= attribute.name %>
+    = @<%= singular_table_name %>.<%= attribute.name %>
 <% end -%>
 br
 .row
   .col-md-2
-    = link_to t("common.edit"), edit_<%= singular_table_name %>_path(@<%= singular_table_name %>), class: "btn btn-primary"
-    = link_to t("common.back"), <%= index_helper %>_path, class: "btn btn-danger"
+    = link_to t("action.edit"), edit_<%= singular_table_name %>_path(@<%= singular_table_name %>), class: "btn btn-primary"
+    = link_to t("action.back"), <%= index_helper %>_path, class: "btn btn-danger"
