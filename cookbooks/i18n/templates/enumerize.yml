@@ -1,0 +1,6 @@
+zh-CN:
+  enumerize:
+    defaults:
+      gender:
+          male: '男'
+          female: '女'
