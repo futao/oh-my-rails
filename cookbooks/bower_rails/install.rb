@@ -1,6 +1,8 @@
 generate 'bower_rails:initialize'
 rake 'bower:install'
 
+uncomment_lines 'config/initializers/bower_rails.rb', /resolve_before/
+
 copy_file File.expand_path('../templates/bower.rake',__FILE__),
         'lib/capistrano/tasks/bower.rake'
 
