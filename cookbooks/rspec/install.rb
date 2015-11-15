@@ -4,7 +4,7 @@ append_to_file '.rspec', '--format documentation'
 
 insert_into_file 'spec/rails_helper.rb',
                  :after=>"RSpec.configure do |config|\n" do
-  %q{config.include FactoryGirl::Syntax::Methods}.indent(2)
+  "config.include FactoryGirl::Syntax::Methods\n".indent(2)
 end
 
 insert_into_file 'config/application.rb',
