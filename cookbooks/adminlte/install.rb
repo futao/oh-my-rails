@@ -1,7 +1,11 @@
 append_to_file 'Bowerfile' do
   <<-EOS.strip_heredoc
 
-  asset "admin-lte"
+  asset 'font-awesome'
+  asset 'ionicons'
+  asset 'admin-lte'
+  asset 'html5shiv'
+  asset 'respond'
   EOS
 end
 rake 'bower:install'
@@ -21,7 +25,6 @@ copy_file File.expand_path('../admin_lte.html.erb', __FILE__),
 create_file 'app/assets/javascripts/admin_lte.js' do
   <<-EOS.strip_heredoc
     //= require jquery
-    //= require jquery_ujs
     //= require admin-lte/bootstrap/js/bootstrap
     //= require admin-lte/dist/js/app
   EOS
@@ -31,9 +34,9 @@ end
 create_file 'app/assets/stylesheets/admin_lte.css' do
   <<-EOS.strip_heredoc
     /*
+     *= require font-awesome/css/font-awesome
+     *= require ionicons/css/ionicons
      *= require admin-lte/bootstrap/css/bootstrap
-     *= require admin-lte/dist/css/AdminLTE
-     *= require admin-lte/dist/css/skins/skin-blue
      */
   EOS
 end
@@ -43,6 +46,13 @@ append_to_file 'config/initializers/assets.rb' do
     \# AdminLTE
     Rails.application.config.assets.precompile += %w(
       admin_lte.js admin_lte.css
+      admin-lte/dist/css/AdminLTE.css
+      admin-lte/dist/css/skins/skin-blue.css
     )
+
+    Rails.application.config.assets.precompile << %r(fontawesome-webfont\.(?:eot|svg|ttf|woff|woff2?)$)
+    Rails.application.config.assets.precompile << %r(ionicons\.(?:eot|svg|ttf|woff)$)
+    Rails.application.config.assets.precompile << 'html5shiv/dist/html5shiv.min.js'
+    Rails.application.config.assets.precompile << 'respond/dest/respond.min.js'
   EOS
 end
