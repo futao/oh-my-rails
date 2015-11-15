@@ -1,8 +1,9 @@
 zh-CN:
-  common: &common
-    actions: 操作
-    show: 详情
+  action:
+    new: 新建
     edit: 编辑
-    destroy: 删除
+    show: 查看
+    delete: 删除
     back: 返回
-    submit: 提交
+    options: 操作
+    confirm_delete: 确认删除

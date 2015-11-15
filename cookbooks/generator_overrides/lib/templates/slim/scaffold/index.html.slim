@@ -1,12 +1,12 @@
 .row
   .col-xs-12
-    = link_to t("common.new")+"<%= class_name %>", new_<%= singular_table_name %>_path, class: "btn btn-primary"
+    = link_to t("action.new")+<%= class_name %>.model_name.human, new_<%= singular_table_name %>_path, class: "btn btn-primary"
 
 .row
   .col-xs-12
     .box
       .box-header
-        h3.box-title <%= plural_table_name %>
+        h3.box-title = <%= class_name %>.model_name.human
         .box-tools
 
       .box-body.table-responsive.no-padding
@@ -14,8 +14,8 @@
           tbody
             tr
 <% attributes.reject(&:password_digest?).each do |attribute| -%>
-              th <%= attribute.human_name %>
+              th = <%= class_name %>.human_attribute_name('<%= attribute.name %>')
 <% end -%>
-              th options
+              th = t("action.options")
 
             = render @<%= plural_table_name %>
