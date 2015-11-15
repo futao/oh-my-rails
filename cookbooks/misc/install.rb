@@ -1,7 +1,5 @@
-# @TODO获取项目名称
 application "config.generators.assets = false"
 application "config.generators.helper = false"
-application "config.i18n.default_locale = 'zh-CN'"
 
 generate "annotate:install"
 
@@ -28,3 +26,5 @@ append_to_file '.gitignore' do
     rails_best_practices_output.html
   EOS
 end
+
+create_file 'Procfile', "web: bundle exec rails s puma -b 0.0.0.0\n"
