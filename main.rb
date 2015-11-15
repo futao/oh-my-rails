@@ -85,7 +85,7 @@ after_bundle do
     misc  rspec i18n capistrano
     bower_rails  kaminari guard  friendly_id
     sidekiq  devise adminlte
-    generator_overrides shared_partials github
+    generator_overrides shared_partials
   }.each do |recipe|
     
       current_recipe_path = File.join(cookbooks_path, recipe , 'install.rb')
@@ -99,6 +99,10 @@ after_bundle do
   git :init
   git add: '.'
   git commit: %q{ -m 'oh-my-rails: setup spring'}
+
+  # special
+  current_recipe_path = File.join(cookbooks_path, 'github' , 'install.rb')
+  rake "rails:template LOCATION=#{current_recipe_path}"
 
   rake 'tmp:create'
   run "bundle exec launchy http://127.0.0.1:3000"
