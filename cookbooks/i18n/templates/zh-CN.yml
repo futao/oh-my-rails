@@ -7,3 +7,6 @@ zh-CN:
     back: 返回
     options: 操作
     confirm_delete: 确认删除
+    created_at: 创建于
+    updated_at: 更新于
+    deleted_at: 删除于

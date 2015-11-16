@@ -21,12 +21,17 @@ copy_file File.expand_path('../admin_lte.html.erb', __FILE__),
             'app/views/layouts/admin_lte.html.erb'
 
 
+copy_file File.expand_path('../icheck/checkbox.js', __FILE__),
+                          'app/assets/javascripts/plugins/checkbox.js'
+
 # js
 create_file 'app/assets/javascripts/admin_lte.js' do
   <<-EOS.strip_heredoc
     //= require jquery
     //= require admin-lte/bootstrap/js/bootstrap
     //= require admin-lte/dist/js/app
+    //= require admin-lte/plugins/iCheck/icheck.min
+    //= require plugins/checkbox
   EOS
 end
 
@@ -37,6 +42,7 @@ create_file 'app/assets/stylesheets/admin_lte.css' do
      *= require font-awesome/css/font-awesome
      *= require ionicons/css/ionicons
      *= require admin-lte/bootstrap/css/bootstrap
+     *= require admin-lte/plugins/iCheck/all
      */
   EOS
 end

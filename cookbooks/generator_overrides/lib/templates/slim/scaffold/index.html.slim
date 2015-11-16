@@ -6,16 +6,31 @@
   .col-xs-12
     .box
       .box-header
-        h3.box-title = <%= class_name %>.model_name.human
-        .box-tools
+        button.btn.btn-default.btn-sm.checkbox-toggle.align-left type="button"
+          i.fa.fa-square-o
+        .btn-group
+          button.btn.btn-default.btn-sm type="button"
+            i.fa.fa-trash-o
 
-      .box-body.table-responsive.no-padding
-        table.table.table-hover
+        .box-tools
+          .input-group.input-group-sm style="width: 150px;"
+            input.form-control.pull-right name="table_search" placeholder="Search" type="text"
+            .input-group-btn
+              button.btn.btn-default type="submit"
+                i.fa.fa-search
+
+
+      .box-body.no-padding
+        table.table.table-hover.checkbox-area
           tbody
             tr
+              th
+              th = <%= class_name %>.human_attribute_name(:id)
 <% attributes.reject(&:password_digest?).each do |attribute| -%>
               th = <%= class_name %>.human_attribute_name('<%= attribute.name %>')
 <% end -%>
+              th = t("action.created_at")
+              th = t("action.deleted_at")
               th = t("action.options")
 
             = render @<%= plural_table_name %>

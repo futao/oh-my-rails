@@ -2,7 +2,4 @@ zh-CN:
   activerecord:
     models:
     attributes:
-      common: &common
-        created_at: 创建于
-        updated_at: 更新于
-        deleted_at: 删除于
+      
