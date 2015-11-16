@@ -1,7 +1,12 @@
 tr
+  td
+    input type="checkbox"
+  td = <%= singular_table_name %>.id
 <% attributes.reject(&:password_digest?).each do |attribute| -%>
   td = <%= singular_table_name %>.<%= attribute.name %>
 <% end -%>
+  td = render_normal_time <%= singular_table_name %>.created_at
+  td = render_normal_time <%= singular_table_name %>.updated_at
   td
     .btn-group
       = link_to t("action.show"), <%= singular_table_name %>, class: 'btn btn-primary'

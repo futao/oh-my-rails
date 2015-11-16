@@ -56,3 +56,20 @@ append_to_file 'config/initializers/assets.rb' do
     Rails.application.config.assets.precompile << 'respond/dest/respond.min.js'
   EOS
 end
+
+copy_file File.expand_path('../icheck/checkbox.js', __FILE__),
+ 'app/assets/javascripts/enterprise/checkbox.js'
+
+append_to_file 'app/assets/javascripts/admin_lte.js' do
+ <<-EOS.strip_heredoc
+
+   //= require admin-lte/plugins/iCheck/icheck.min
+   //= require enterprise/checkbox
+ EOS
+end
+
+insert_into_file 'app/assets/stylesheets/admin_lte.css', before: '*/' do
+  <<-EOS.strip_heredoc
+    *= require admin-lte/plugins/iCheck/all
+  EOS
+end
