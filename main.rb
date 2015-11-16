@@ -85,17 +85,15 @@ after_bundle do
   cookbooks_path = File.expand_path('../cookbooks',__FILE__)
 
   %w{
-    misc  rspec i18n capistrano
+    misc staging email rspec i18n capistrano
     bower_rails  kaminari guard  friendly_id
     sidekiq  devise adminlte
     generator_overrides shared_partials
   }.each do |recipe|
-
-      current_recipe_path = File.join(cookbooks_path, recipe , 'install.rb')
-      rake "rails:template LOCATION=#{current_recipe_path}"
-      git add: '.'
-      git commit: %Q< -m 'oh-my-rails: add #{recipe.downcase}' >
-
+    current_recipe_path = File.join(cookbooks_path, recipe , 'install.rb')
+    rake "rails:template LOCATION=#{current_recipe_path}"
+    git add: '.'
+    git commit: %Q< -m 'oh-my-rails: add #{recipe.downcase}' >
   end
 
   run "bundle exec spring binstub  --all"

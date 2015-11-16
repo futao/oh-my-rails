@@ -1,6 +1,5 @@
 application "config.generators.assets = false"
 application "config.generators.helper = false"
-application "config.time_zone = 'Beijing'"
 
 generate "annotate:install"
 
