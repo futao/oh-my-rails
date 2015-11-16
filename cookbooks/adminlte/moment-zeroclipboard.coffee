@@ -1,5 +1,5 @@
 $ ->
-  $('.timestring').each ->
+  $('.time_in_words').each ->
     form_time = moment(this.textContent)
     seven_days_ago = moment().subtract('days', 7)
     if form_time.isBefore(seven_days_ago)
