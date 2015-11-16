@@ -4,12 +4,5 @@
  *= require admin-lte/bootstrap/css/bootstrap
  *= require slick-carousel/slick/slick
  *= require slick-carousel/slick/slick-theme
-
- *= require applicant/site-header
- *= require applicant/home-hero-slides
- *= require applicant/site-footer
- *= require applicant/home
- *= require applicant/job-page
- *= require applicant/login
- *= require applicant/panel-signup
+ *= require_directory ./applicant
  */
