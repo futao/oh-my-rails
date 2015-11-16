@@ -5,8 +5,8 @@ tr
 <% attributes.reject(&:password_digest?).each do |attribute| -%>
   td = <%= singular_table_name %>.<%= attribute.name %>
 <% end -%>
-  td = <%= singular_table_name %>.created_at
-  td = <%= singular_table_name %>.updated_at
+  td.timestring = <%= singular_table_name %>.created_at
+  td.timestring = <%= singular_table_name %>.updated_at
   td
     .btn-group
       = link_to t("action.show"), <%= singular_table_name %>, class: 'btn btn-primary'
