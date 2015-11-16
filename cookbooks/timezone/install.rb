@@ -1,6 +1,6 @@
 application "config.time_zone = 'Beijing'"
 
-insert_into_file 'app/helpers/application_helper.rb' do
+insert_into_file 'app/helpers/application_helper.rb', :after=>"module ApplicationHelper\n"do
   <<-EOS.strip_heredoc
     def render_normal_time(from_time)
       if from_time < 7.days.ago
