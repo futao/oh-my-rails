@@ -9,6 +9,11 @@ gem 'devise_invitable'
 
 gem 'rails-i18n'
 gem 'i18n-tasks', '0.8.7'
+
+gem 'kaminari'
+gem 'kaminari-i18n'
+
+
 gem 'seedbank'
 gem 'bower-rails'
 gem 'sidekiq'
@@ -16,7 +21,7 @@ gem 'sinatra', :require => nil
 gem 'puma'
 gem 'friendly_id'
 
-gem 'kaminari'
+
 gem 'slim-rails'
 gem 'enumerize'
 gem 'paranoia'
