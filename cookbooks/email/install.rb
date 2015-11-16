@@ -25,7 +25,7 @@ end
 
 
 environment nil , env: 'development' do
-  %q[config.action_mailer.default_url_options = { :host => 'localhost:3000' }]
+  %q[config.action_mailer.default_url_options = { :host => 'http://127.0.0.1:3000' }]
 end
 environment nil , env: 'development' do
   %q{config.action_mailer.delivery_method = :letter_opener}
@@ -33,11 +33,11 @@ end
 
 
 environment nil , env: 'staging' do
-  %q[config.action_mailer.default_url_options = { :host => 'staging.91tbm.com' }]
+  %q[config.action_mailer.default_url_options = { :host => 'http://staging.91tbm.com' }]
 end
 
 environment nil , env: 'production' do
-  %q[config.action_mailer.default_url_options = { :host => 'www.91tbm.com' }]
+  %q[config.action_mailer.default_url_options = { :host => 'http://www.91tbm.com' }]
 end
 
 

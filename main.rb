@@ -86,8 +86,8 @@ after_bundle do
 
   %w{
     misc staging email rspec i18n capistrano
-    bower_rails  kaminari guard  friendly_id
-    sidekiq  devise adminlte
+    bower_rails  kaminari guard  devise friendly_id
+    sidekiq   adminlte
     generator_overrides shared_partials
   }.each do |recipe|
     current_recipe_path = File.join(cookbooks_path, recipe , 'install.rb')

@@ -16,5 +16,5 @@ if  model_name.present?
   uncomment_lines migrate_file, /.*confirm.*/
   uncomment_lines migrate_file, /.*unlock.*|.*failed_attempts.*|.*locked_at/
   rake "db:migrate"
-  
+
 end
