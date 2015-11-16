@@ -12,7 +12,7 @@ if yes?("是否安装主页(Y/N)")
   directory File.join(current_path, "./assets/stylesheets"), "app/assets/stylesheets"
   directory File.join(current_path, "./assets/views/main"), "app/views"
   directory File.join(current_path, "./assets/views/layouts"), "app/views/layouts"
-  directory File.join(current_path, "./assets/images"), "app/assets/images"
+  directory File.join(current_path, "./assets/images/applicant"), "app/assets/images/applicant"
 
   generate :controller, "applicant/welcome index --no-controller-specs --skip-template-engine --skip-routes"
 
