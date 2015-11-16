@@ -28,6 +28,7 @@ copy_file File.expand_path('../icheck/checkbox.js', __FILE__),
 create_file 'app/assets/javascripts/admin_lte.js' do
   <<-EOS.strip_heredoc
     //= require jquery
+    //= require jquery_ujs
     //= require admin-lte/bootstrap/js/bootstrap
     //= require admin-lte/dist/js/app
     //= require admin-lte/plugins/iCheck/icheck.min
