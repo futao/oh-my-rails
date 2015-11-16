@@ -24,6 +24,7 @@ gem 'enumerize'
 gem 'paranoia'
 gem 'aasm'
 gem 'awesome_nested_set'
+gem 'china_city'
 
 gem_group :development do
   gem 'annotate'
@@ -89,13 +90,14 @@ after_bundle do
     bower_rails  kaminari guard  friendly_id
     sidekiq  devise adminlte
     generator_overrides shared_partials
+    china_city
   }.each do |recipe|
-    
+
       current_recipe_path = File.join(cookbooks_path, recipe , 'install.rb')
       rake "rails:template LOCATION=#{current_recipe_path}"
       git add: '.'
       git commit: %Q< -m 'oh-my-rails: add #{recipe.downcase}' >
-    
+
   end
 
   run "bundle exec spring binstub  --all"
