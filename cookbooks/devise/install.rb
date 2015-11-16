@@ -14,7 +14,7 @@ if  model_name.present?
 
   migrate_file = Dir["db/migrate/*"].grep(/.*_devise_create_#{model_name}.*/).first
   uncomment_lines migrate_file, /.*confirm.*/
-  uncomment_lines migrate_file, /.*unlock.*|.*failed_attempts.*/
+  uncomment_lines migrate_file, /.*unlock.*|.*failed_attempts.*|.*locked_at/
   rake "db:migrate"
   
 end
