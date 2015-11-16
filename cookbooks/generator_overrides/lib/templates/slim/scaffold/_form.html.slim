@@ -1,7 +1,7 @@
-- if @<%= singular_table_name %>.errors.any?
-  = render partial: 'shared/errors', locals: { model: @<%=singular_table_name %> }
+- if <%= singular_table_name %>.errors.any?
+  = render partial: 'shared/errors', locals: { model: <%=singular_table_name %> }
 
-= form_for @<%= singular_table_name %> do |f|
+= form_for <%= singular_table_name %> do |f|
 <% attributes.each do |attribute| -%>
   .form-group
 <% if attribute.password_digest? -%>
