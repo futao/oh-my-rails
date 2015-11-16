@@ -6,6 +6,8 @@ append_to_file 'Bowerfile' do
   asset 'admin-lte'
   asset 'html5shiv'
   asset 'respond'
+  asset 'moment'
+  asset 'zeroclipboard'
   EOS
 end
 rake 'bower:install'
@@ -24,6 +26,7 @@ copy_file File.expand_path('../admin_lte.html.erb', __FILE__),
 copy_file File.expand_path('../icheck/checkbox.js', __FILE__),
                           'app/assets/javascripts/plugins/checkbox.js'
 
+copy_file File.expand_path('../moment-zeroclipboard.coffee', __FILE__), 'app/assets/javascripts/moment-zeroclipboard.coffee'
 # js
 create_file 'app/assets/javascripts/admin_lte.js' do
   <<-EOS.strip_heredoc
@@ -33,6 +36,9 @@ create_file 'app/assets/javascripts/admin_lte.js' do
     //= require admin-lte/dist/js/app
     //= require admin-lte/plugins/iCheck/icheck.min
     //= require plugins/checkbox
+    //= require moment
+    //= require moment/locale/zh-cn
+    //= require moment-zeroclipboard
   EOS
 end
 
