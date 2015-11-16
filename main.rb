@@ -7,20 +7,17 @@ gem 'devise'
 gem 'devise-i18n'
 gem 'devise_invitable'
 
-gem 'rails-i18n'
-gem 'i18n-tasks', '0.8.7'
-
 gem 'kaminari'
 gem 'kaminari-i18n'
 
-
+gem 'rails-i18n'
 gem 'seedbank'
 gem 'bower-rails'
 gem 'sidekiq'
 gem 'sinatra', :require => nil
 gem 'puma'
 gem 'friendly_id'
-
+gem 'ruby-pinyin'
 
 gem 'slim-rails'
 gem 'enumerize'
@@ -32,6 +29,7 @@ gem_group :development do
   gem 'annotate'
   gem 'dotenv-rails'
   gem 'foreman'
+  gem 'i18n-tasks', '0.8.7'
 
   # Guard
   gem 'guard-bundler'
@@ -87,7 +85,7 @@ after_bundle do
   cookbooks_path = File.expand_path('../cookbooks',__FILE__)
 
   %w{
-    misc  rspec i18n capistrano
+    misc  timezone rspec i18n capistrano
     bower_rails  kaminari guard  friendly_id
     sidekiq  devise adminlte
     generator_overrides shared_partials
