@@ -3,6 +3,7 @@ application "config.generators.helper = false"
 
 generate "annotate:install"
 
+# @TODO seedbank
 create_file 'db/seeds/development/.keep'
 
 insert_into_file 'config/database.yml', :after=>"adapter: postgresql\n" do
@@ -27,4 +28,4 @@ append_to_file '.gitignore' do
   EOS
 end
 
-create_file 'Procfile', "web: bundle exec rails s puma -b 0.0.0.0\n"
+create_file 'Procfile', "web: bundle exec rails s puma\n"
