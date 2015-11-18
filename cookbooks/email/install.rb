@@ -25,7 +25,7 @@ end
 
 
 environment nil , env: 'development' do
-  %q[config.action_mailer.default_url_options = { :host => 'http://127.0.0.1:3000' }]
+  %q[config.action_mailer.default_url_options = { :host => 'localhost:3000' }]
 end
 environment nil , env: 'development' do
   %q{config.action_mailer.delivery_method = :letter_opener}
