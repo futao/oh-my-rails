@@ -42,6 +42,7 @@ gem_group :development do
   gem 'capistrano-rbenv'
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
+  gem 'capistrano-bower'
   gem 'capistrano3-puma'
   gem 'capistrano-sidekiq',  '0.5.3'
 
