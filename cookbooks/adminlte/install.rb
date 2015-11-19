@@ -8,7 +8,6 @@ append_to_file 'Bowerfile' do
   asset 'respond'
   asset 'moment'
   asset 'zeroclipboard'
-  asset 'summernote'
   EOS
 end
 rake 'bower:install'
@@ -40,14 +39,6 @@ create_file 'app/assets/javascripts/admin_lte.js' do
     //= require moment
     //= require moment/locale/zh-cn
     //= require moment-zeroclipboard
-    //= require summernote
-
-    $(document).ready(function() {
-      $('.summernote').summernote({
-        height: 300,
-        tabsize: 2
-      });
-    });
 
   EOS
 end
@@ -60,7 +51,6 @@ create_file 'app/assets/stylesheets/admin_lte.css' do
      *= require ionicons/css/ionicons
      *= require admin-lte/bootstrap/css/bootstrap
      *= require admin-lte/plugins/iCheck/all
-     *= require summernote
      */
   EOS
 end
