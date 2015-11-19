@@ -6,9 +6,6 @@ append_to_file 'Bowerfile' do
   asset 'admin-lte'
   asset 'html5shiv'
   asset 'respond'
-  asset 'moment'
-  asset 'zeroclipboard'
-  asset 'summernote'
   EOS
 end
 rake 'bower:install'
@@ -23,32 +20,14 @@ directory File.expand_path('../shared', __FILE__), 'app/views/shared/admin_lte'
 copy_file File.expand_path('../admin_lte.html.erb', __FILE__),
             'app/views/layouts/admin_lte.html.erb'
 
-
-copy_file File.expand_path('../icheck/checkbox.js', __FILE__),
-                          'app/assets/javascripts/plugins/checkbox.js'
-
-copy_file File.expand_path('../moment-zeroclipboard.coffee', __FILE__), 'app/assets/javascripts/moment-zeroclipboard.coffee'
 # js
 create_file 'app/assets/javascripts/admin_lte.js' do
   <<-EOS.strip_heredoc
     //= require jquery
     //= require jquery_ujs
+    //= require turbolinks
     //= require admin-lte/bootstrap/js/bootstrap
     //= require admin-lte/dist/js/app
-    //= require admin-lte/plugins/iCheck/icheck.min
-    //= require plugins/checkbox
-    //= require moment
-    //= require moment/locale/zh-cn
-    //= require moment-zeroclipboard
-    //= require summernote
-
-    $(document).ready(function() {
-      $('.summernote').summernote({
-        height: 300,
-        tabsize: 2
-      });
-    });
-
   EOS
 end
 
@@ -59,8 +38,6 @@ create_file 'app/assets/stylesheets/admin_lte.css' do
      *= require font-awesome/css/font-awesome
      *= require ionicons/css/ionicons
      *= require admin-lte/bootstrap/css/bootstrap
-     *= require admin-lte/plugins/iCheck/all
-     *= require summernote
      */
   EOS
 end
