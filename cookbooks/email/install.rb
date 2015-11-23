@@ -8,7 +8,7 @@ inject_into_file 'config/application.rb',
 
     config.action_mailer.default charset: 'utf-8'
     config.action_mailer.default_options = {
-      from:     '"淘帮忙团队" <notify@91tbm.com>',
+      from:     '"淘帮忙的不靠谱团队" <notify@91tbm.com>',
       reply_to: '"淘帮忙问题反馈" <talk@91tbm.com>'
     }
 
